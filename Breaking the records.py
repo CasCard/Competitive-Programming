@@ -1,26 +1,24 @@
 def breakingRecords(scores):
-    Minimun = []
-    Maximum = []
-    Minimun.append(scores[0])
-    Maximum.append(scores[0])
+    Minimun = scores[0]
+    Maximum = scores[0]
     Min = 0
     Max = 0
+    for score in scores:
+        if score < 0:
+            return False
     for i in range(1, len(scores)):
-        if (scores[i] < Minimun[i - 1] and scores[i] < Maximum[i - 1]):
-            Minimun.append(scores[i])
-            Maximum.append(Maximum[i - 1])
+        if (scores[i] < Minimun and scores[i] < Maximum):
+            Minimun = scores[i]
             Min += 1
-        elif (scores[i] > Minimun[i - 1] and scores[i]>Maximum[i-1]):
-            Minimun.append(Minimun[i - 1])
-            Maximum.append(scores[i])
+        elif (scores[i] > Minimun and scores[i] > Maximum):
+            Maximum = scores[i]
             Max += 1
         else:
-            Maximum.append(Maximum[i - 1])
-            Minimun.append(Minimun[i - 1])
+            continue
 
     # print(Minimun)
     # print(Maximum)
-    return "{} {}".format(Max, Min)
+    return [Max,Min]
 
 
 n = int(input())
