@@ -9,8 +9,8 @@ class DynamicArray(object):
         return self.n
 
     def __getitem__(self, item):
-        if not 0<= k <self.n:
-            return IndexError('K is out of bounts')
+        if not 0<= item <self.n:
+            return IndexError('K is out of bounds')
 
         return  self.A[item]
 
@@ -20,4 +20,14 @@ class DynamicArray(object):
         self.A[self.n]=ele
         self.n += 1
 
-    def _re
+    def _resize(self,new_cap):
+        B = self.make_array(new_cap)
+        for k in range(self.n):
+            B[k]=self.A[k]
+
+        self.A = B
+        self.capacity= new_cap
+
+    def make_array(selfself,new_cap):
+        return (new_cap*ctypes.py_object)()
+
