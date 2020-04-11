@@ -24,7 +24,7 @@ def primeFactorsCount(n):
     if len(ans) <= math.pow(10, 9):
         counts = collections.Counter(ans)
         countList = list(counts.values())
-        keyList=list(counts.keys())
+        keyList = list(counts.keys())
         countList = list(map(lambda x: x + 1, countList))
         numberOfDivisors = reduce((lambda x, y: x * y), countList)
         return [numberOfDivisors, len(keyList)]
@@ -32,28 +32,28 @@ def primeFactorsCount(n):
         return [0, 0]
 
 
-i = math.pow(10, 9)
+i = 2
 flag = 0
 for j in range(t):
     X, K = map(int, input().split())
-    while i > 2:
+    while True:
         numOfDiv, kprime = map(int, primeFactorsCount(i))
         # print(f'{i}:{numOfDiv}:{kprime}')
         if (numOfDiv == 0 and kprime == 0):
             flag = 0
             break
-        if (X < 2 and K < 1):
+        if ((X < 2 and K < 1) or K < 1):
             flag = 0
             break
-        elif (kprime <=K  and numOfDiv >= kprime):
+        elif (kprime <= K and numOfDiv >= kprime):
             # print(f'{i}:{numOfDiv}:{kprime}')
-            if (numOfDiv == X and K==kprime):
+            if (numOfDiv == X and K == kprime):
                 flag = 1
                 break
             else:
                 flag = 0
-                i = int(i / 2)
-        i-=1
+                i = int(i * 2)
+        i += 1
 
     if flag:
         print(1)
