@@ -1,34 +1,14 @@
-import math
-from itertools import combinations
-def coprime(a, b):
-    return (math.gcd(a, b) == 1)
-
-coprimePairs = []
-
-def numberOfPairs(arr, n):
-    count = 0
-    for i in range(0, n - 1):
-        for j in range(i + 1, n):
-            if (coprime(arr[i], arr[j])):
-                count += 1
-                coprimePairs.append((arr[i], arr[j]))
-    return coprimePairs
-
-
-arr = [1, 2, 3, 4,5]
-n = len(arr)
-
-print(numberOfPairs(arr, n))
-arrayList = []
-resudualArray=[]
-while len(arr) != 0:
-    arrayList.append(arr[0])
-    for i in range(1, len(arr)):
-        arrayList.append(arr[i])
-        primePossibleCombination = numberOfPairs(arrayList, len(arrayList))
-        combinationList = list(combinations(arr[:i + 1], 2))
-        if (coprimePairs == combinationList):
-            print(coprimePairs)
+T = int(input())
+for _ in range(T):
+    numberOfPages = int(input())
+    if numberOfPages == 1:
+        print("1")
+        print("1 1")
+    else:
+        print(numberOfPages // 2)
+        if numberOfPages & 1:
+            print("3 1 2", numberOfPages)
         else:
-            resudualArray.append(arr[i])
-        print(arrayList)
+            print("2 1 2")
+        for i in range(4, numberOfPages + 1, 2):
+            print("2", i - 1, i)
