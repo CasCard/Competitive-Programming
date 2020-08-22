@@ -9,7 +9,7 @@ class Stack(object):
     # Adding new element to the END stack
     def push(self, item):
         return self.items.append(item)
-
+    #
     # Remove an element
     def pop(self):
         return self.items.pop()
