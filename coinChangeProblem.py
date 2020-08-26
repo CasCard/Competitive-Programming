@@ -34,7 +34,7 @@ def rec_coin_dynam(target, coins, known_results):
     return min_coins
 
 
-change = 11
-coinSet = [1, 5, 10, 25]
+change = 25
+coinSet = [1,3,5]
 nullSet = [0] * (change + 1)
 print(rec_coin_dynam(change, coinSet, nullSet))

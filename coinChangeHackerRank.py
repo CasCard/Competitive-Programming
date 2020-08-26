@@ -20,4 +20,4 @@ def getWays(n, c, memo=dict()):
     return total
 
 
-print(getWays(4,[1,2,3],{}))
+print(getWays(25,[1,3,5],{}))
