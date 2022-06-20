@@ -22,3 +22,5 @@
 /venv/pyvenv.cfg
 /venv/WalterandJesse.py
 /venv
+.idea/
+cmake-build-debug
