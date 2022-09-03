@@ -49,3 +49,28 @@ add_executable(program40 PROBLEM_OF_THE_DAY/HEAP.cpp)
 add_executable(program41 PROBLEM_OF_THE_DAY/PERMXOR.cpp)
 add_executable(program42 PROBLEM_OF_THE_DAY/CATSRATS.cpp)
 add_executable(program43 PROBLEM_OF_THE_DAY/FENWICK_TREE.cpp)
+add_executable(program44 PROBLEM_OF_THE_DAY/DSA_Fortnight.cpp)
+add_executable(program45 PROBLEM_OF_THE_DAY/MIN_SPANNING_TREE.cpp)
+add_executable(program46 PROBLEM_OF_THE_DAY/DISJOINT.cpp)
+
+include_directories(LeetCode)
+file(GLOB LeetCode *.cpp)
+add_executable(program47 LeetCode/HAPPY-NUMBER.cpp)
+add_executable(program48 LeetCode/LearnC.cpp)
+add_executable(program49 LeetCode/FindingDuplicates_unorderedset.cpp)
+add_executable(program52 LeetCode/ValidAnagramcpp.cpp)
+add_executable(program54 LeetCode/TwoSum.cpp)
+
+
+file(GLOB LeetCodeBlind75C *.cpp)
+include_directories(LeetCodeBlind75C)
+add_executable(program50 LeetCodeBlind75C/ContainsDuplicates.c)
+add_executable(program51 LeetCodeBlind75C/ValidAnagram.c)
+add_executable(program53 LeetCodeBlind75C/TwoSum.c)
+
+
+file(GLOB Structy *.cpp)
+include_directories(Structy)
+add_executable(program55 Structy/linked-list-warm-up.cpp)
+add_executable(program56 Structy/linked-list-values.cpp)
+
