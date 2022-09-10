@@ -16,15 +16,29 @@ class Node{
         }
 };
 
+void linkedListValues(Node* head,vector<string> &values){
+    if(head == nullptr) return;
+    values.push_back(head->value);
+    linkedListValues(head->next,values);
+}
+
 vector<string> linkedListValues(Node* head){
     vector<string> values;
-    Node* current = head;
-    while(current != nullptr){
-        values.push_back(current->value);
-        current = current -> next;
-    }
+    linkedListValues(head, values);
     return values;
 }
+
+//Iterative implementation
+
+//vector<string> linkedListValues(Node* head){
+//    vector<string> values;
+//    Node* current = head;
+//    while(current != nullptr){
+//        values.push_back(current->value);
+//        current = current -> next;
+//    }
+//    return values;
+//}
 
 int main(){
     Node a("A");

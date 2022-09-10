@@ -73,4 +73,6 @@ file(GLOB Structy *.cpp)
 include_directories(Structy)
 add_executable(program55 Structy/linked-list-warm-up.cpp)
 add_executable(program56 Structy/linked-list-values.cpp)
+add_executable(program57 Structy/reverse-list.cpp)
+add_executable(program58 Structy/Q1.cpp)
 
