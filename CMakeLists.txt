@@ -76,4 +76,18 @@ add_executable(program56 Structy/linked-list-values.cpp)
 add_executable(program57 Structy/reverse-list.cpp)
 add_executable(program58 Structy/Q1.cpp)
 add_executable(program59 Structy/Q2.cpp)
+add_executable(program61 Structy/pari-sum.cpp)
+add_executable(program64 Structy/tree_value_count.cpp)
+add_executable(program65 Structy/all_tree_path.cpp)
+add_executable(program66 Structy/level_averages.cpp)
+add_executable(program67 Structy/leaf_list.cpp)
+
+file(GLOB STL *.cpp)
+include_directories(STL)
+add_executable(program60 STL/std_find.cpp)
+add_executable(program63 STL/vector_print.cpp)
+
+file(GLOB STL *.cpp)
+include_directories(Sorting)
+add_executable(program62 Sorting/quick_sort.cpp)
 
