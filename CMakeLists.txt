@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.0)
 project(Competitive-Programming)
 
-set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD 17)
 
 add_executable(program1 infixtopostfix.cpp EQUALSTRING_WA.cpp BinaryHeap.cpp binary_heap_practice.cpp SUBSTRING.cpp)
 add_executable(program2 NOTALLFL.cpp)
@@ -81,6 +81,9 @@ add_executable(program64 Structy/tree_value_count.cpp)
 add_executable(program65 Structy/all_tree_path.cpp)
 add_executable(program66 Structy/level_averages.cpp)
 add_executable(program67 Structy/leaf_list.cpp)
+add_executable(program68 Structy/graph_warmup.cpp)
+add_executable(program69 Structy/has_path.cpp)
+add_executable(program70 Structy/undirected_path.cpp)
 
 file(GLOB STL *.cpp)
 include_directories(STL)
