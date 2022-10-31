@@ -93,6 +93,8 @@ add_executable(program76 Structy/minimum_island.cpp)
 add_executable(program77 Structy/min_island_count_recursive.cpp)
 add_executable(program78 Structy/closest_carrot.cpp)
 add_executable(program79 Structy/longest_path.cpp)
+add_executable(program80 Structy/OOPs.cpp)
+add_executable(program81 Structy/Inheritance.cpp)
 
 file(GLOB STL *.cpp)
 include_directories(STL)
